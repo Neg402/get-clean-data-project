@@ -38,8 +38,6 @@ dataTestTrain <- join(combinedTest, combinedTrain)
 # LABEL VARIABLE NAMES: change the name of the columns on dataTestTrain as per the variableNames
 # add "subject" & "activity" to the end
 
-# columnNames<- rbind(variableNames, "subject")
-#  columnNames<- rbind(columnNames, "activity")
 colAdd <- data.frame(V1 = c(0, 0), V2 = c("subject", "activity"))
 columnNames <- rbind(variableNames, colAdd)
 colnames(dataTestTrain) <- columnNames[,2]
